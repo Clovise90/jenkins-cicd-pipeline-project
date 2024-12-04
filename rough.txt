@@ -2,3 +2,25 @@ mvn sonar:sonar \
   -Dsonar.projectKey=jjtech-cicd \
   -Dsonar.host.url=http://172.31.31.101:9000 \
   -Dsonar.login=9a7d65caaa4591f678caaa9a84da86dfd7f4c41a
+
+<?xml version="1.0" encoding="UTF-8"?>
+<settingsSecurity>
+    <master>{UNI7n09QX4gHn8B1ZZi/xLIvYsshdNa6hMcrqJs27mc=}</master>
+</settingsSecurity>
+
+<servers>
+    <server>
+      <id>nexus</id>
+      <username>admin</username>  <!-- Provide Your Nexus Repository Server Username and Password -->
+      <password>{IACyO3WEGIwHV9GORSTfaA5KfP6f/hNDlyUa3bevdho=}</password>
+    </server>
+</servers>
+
+<mirrors>
+    <mirror>
+        <id>nexus</id>
+        <name>nexus</name>
+        <url>http://172.31.20.59:8081/repository/maven_project/</url>
+        <mirrorOf>*</mirrorOf>
+    </mirror>
+</mirrors>
